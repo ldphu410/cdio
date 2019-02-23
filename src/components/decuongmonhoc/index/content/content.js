@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {MENUITEM} from './../../../../config/chuan-dau-ra';
-import ThongTinChung from './../../thong-tin-chung/thong-tin-chung';
+import ThongTinChung from './../../../../containers/decuongmonhoc/thong-tin-chung';
 import TaiNguyenMonHoc from './../../tai-nguyen-mon-hoc/tai-nguyen-mon-hoc';
+import ChuanDauRaMonHoc from './../../../../containers/decuongmonhoc/chuan-dau-ra';
 
 export default class Content extends Component {
     render() {
@@ -19,6 +20,13 @@ export default class Content extends Component {
                 return content_layout = (
                     <React.Fragment>
                         <TaiNguyenMonHoc />
+                    </React.Fragment>
+                );
+            }
+            case MENUITEM.CHUAN_DAU_RA: {
+                return content_layout = (
+                    <React.Fragment>
+                        <ChuanDauRaMonHoc />
                     </React.Fragment>
                 );
             }
